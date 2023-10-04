@@ -14,6 +14,12 @@ function Login() {
     getCodes()
   },[])
 
+  useEffect(()=>{
+    if(data.length > 0){
+      console.log(data);
+    }
+  },[data])
+
   function clickLogin(){
     console.log(number)
     let matchingRow = null;
