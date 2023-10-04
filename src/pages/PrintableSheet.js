@@ -1,20 +1,23 @@
 import React from 'react'
-
+import logo from '../images/logo-1.jpg'
 var URLsearch = window.location.hash;
 
 function PrintableSheet() {
-  function formatDate(){
 
-    }
   let elements=URLsearch.split(',')
   const customerName = elements[1].replace(/%/g, ' ');
   const jobsite = elements[2].replace(/%/g, ' ');
   const contactName = elements[0].replace(/#/g, ' ');
 
+  function formatDate(){
+
+  }
+
+
   return (
     <div className='wrapper-sheet'>
             <div id="header">
-        {/* <img src={logo}></img> */}
+        <img src={logo}></img>
         <div>
             <p> 10979 Olsen Road </p>
             <p> Surrey, BC </p>
