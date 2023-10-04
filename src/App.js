@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
+          <Route path="/" element = {<Login />}/>
           <Route path="/inventory" element = {<Inventory />}/>
           <Route path="/login" element = {<Login />}/>
           <Route path="/printableSheet" element = {<PrintableSheet />}/>

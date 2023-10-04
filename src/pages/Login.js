@@ -9,6 +9,7 @@ function Login() {
     .then(response=>response.json())
     .then(response=>setData(response))
   }
+  
   useEffect(()=>{ 
     getCodes()
   },[])
