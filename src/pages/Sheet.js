@@ -1,10 +1,8 @@
-import {React, useState} from 'react'
+import React from 'react'
 import logo from '../images/logo-1.jpg'
 var URLsearch = window.location.hash;
 
-function PrintableSheet() {
-
-  const [urlSheet, setUrlSheet] = useState('')
+function Sheet() {
 
   let elements=URLsearch.split(',')
 
@@ -19,16 +17,13 @@ function PrintableSheet() {
   }
 
   function printSheet(){
-    // window.print() // CTR + P 
-    // window.location.href = "/sheet" + URLsearch;
-    setUrlSheet("/sheet" + URLsearch)
+    window.print() // CTR + P 
   }
  
   return (
-    <div className='container'>
-      <div className='wrapper-sheet'>
+      <div className='wrapper-sheet' id="printable">
               <div id="header">
-          <img src={logo} ></img>
+          <img src={logo} onLoad={()=>printSheet()}></img>
           <div>
               <p> 10979 Olsen Road </p>
               <p> Surrey, BC </p>
@@ -308,12 +303,8 @@ function PrintableSheet() {
             </tbody>
           </table>
         </div>
-        <button onClick={()=>printSheet()}><i className="bi bi-printer"></i></button>
       </div>
-      <iframe src={urlSheet} />
-    </div>
-
   )
 }
 
-export default PrintableSheet
+export default Sheet

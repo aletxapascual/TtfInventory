@@ -2,7 +2,8 @@ import { BrowserRouter as Router, Route, Routes, useActionData } from "react-rou
 import './App.css';
 import Inventory from './pages/Inventory.js'
 import Login from './pages/Login.js'
-import PrintableSheet from "./pages/PrintableSheet";
+import PrintableSheet from "./pages/PrintableSheet"
+import Sheet from "./pages/Sheet.js"
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/inventory" element = {<Inventory />}/>
           <Route path="/login" element = {<Login />}/>
           <Route path="/printableSheet" element = {<PrintableSheet />}/>
+          <Route path="/sheet" element = {<Sheet />}/>
         </Routes>
       </Router>
     </div>
